@@ -1,0 +1,12 @@
+@Codigo INT
+
+SELECT usu_Codigo, usu_Nome FROM Usuario
+
+WHERE (
+	@Codigo IN (446 /*CARLOS*/, 447 /*CLEU*/, 434 /*PASTORE*/, 454 /*GABRIELLE*/, 573 /*JOYCE*/, 437 /*LUCAS*/, 445 /*MARCELO*/, 435 /*BALDI*/, 495 /*PAULO CESAR*/, 384 /*ROSANGELA*/, 396 /*SIMONE*/, 383 /*WILSON*/) AND usu_Codigo = 383 --Wilson
+	OR (@Codigo = 389 AND usu_Codigo = 389) --Alexsandro
+	OR (@Codigo = 684 /*ANDERSON*/ AND usu_Codigo = 705) --Astorga
+	OR (@Codigo IN (385 /*CLEBER*/, 494 /*CRISTIANE*/, 492 /*MATHEUS CESAR*/) AND usu_Codigo = 385) --Cleber
+	OR (@Codigo = 463 AND usu_Codigo = 463) --Pablo
+	OR (@Codigo = 453 /*RITA*/ AND usu_Codigo = 726) --Neiva
+);

@@ -1,0 +1,56 @@
+@Codigo INT
+
+SELECT usu_Codigo, usu_Nome FROM Usuario
+
+WHERE (
+	usu_Reserva1 = 'ANALISTA BACKOFFICE'
+	OR usu_Codigo IN (438, 384, 454, 437, 730)
+)
+
+AND (
+	(@Codigo IN (385, 494, 492) AND usu_Codigo = 438) --Dayana Cardoso
+	OR (@Codigo = 495 AND usu_Codigo = 420) --Tatiana de Paula
+	OR (@Codigo IN (446, 434, 573, 435, 453) AND usu_Codigo = 440) --Giselle
+	OR (@Codigo IN (447, 445, 684) AND usu_Codigo = 439) --Edna
+	OR (@Codigo = 463 AND usu_Codigo IN (439, 730)) --Edna e Thaylann
+	OR (@Codigo = 606 AND usu_Codigo IN (454, 730)) --Gabrielle e Thaylann
+	OR (@Codigo = 384 AND usu_Codigo = 384) --Rosangela
+	OR (@Codigo IN (396, 383, 389) AND usu_Codigo IN (384, 454, 730)) --Rosangela, Gabrielle e Thaylann
+	OR (@Codigo = 454 AND usu_Codigo = 454) --Gabrielle
+	OR (@Codigo = 437 AND usu_Codigo = 437) --Lucas
+	OR (@Codigo = 730 AND usu_Codigo = 730) --Thaylann
+);
+
+/*
+	385 = Cleber Caetano
+	494 = Cristiane Rodrigues
+	492 = Matheus Cesar
+
+	495 = Paulo Pelanda
+
+	446 = Carlos Cruz
+	434 = Daniel Pastore
+	573 = Joyce Cortez
+	435 = Paulo Baldi
+	453 = Rita Lucchi
+
+	447 = Cleu Melatto
+	445 = Marcelo Machado
+	684 = Anderson Altomani
+
+	463 = Pablo Rio
+
+	606 = Douglas Maximiano
+
+	384 = Rosangela
+
+	396 = Simone Hidalgo
+	383 = Wilson Cavalcante
+	389 = Alexsandro Alves
+
+	454 = Gabrielle
+
+	437 = Lucas
+
+	730 = Thaylann
+*/
